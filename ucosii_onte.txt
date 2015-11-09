@@ -1,0 +1,40 @@
+******************************************************************************/
+**                     index
+**  一、 ucosii 移植笔记
+**   1.  ucosii framFile Structure 
+**   2.  File modification
+**
+******************************************************************************/
+一、ucosii file fram
+
+--doc         there are some FAQ in it which named help file
+
+--port
+ |-- os_cpu.h
+ |-- os_cpu.c
+ |-- os_cpu_a.s
+ |-- os_dbg.c
+
+--source
+ |-- ucosii.h
+ |-- os_core.h
+ |-- os_time.h
+ |-- ...
+ |-- os_flags.h
+
+2. file modigication
+
+  1). os_cpu.h 
+    modigication DATA_TYPEs 修改数据类型与开发板实际情况相同；
+    OS_STK_GROWTH 定义栈生长方向, 1 为 从高到低生长;
+    OS_CRITICAL_METHOD  定义进入临界段的三种模式，常用方法 3UL;
+  2). os_cpu.c
+    OSTaskStkInit (...) 
+    OS_CPU_SysTickInit (...)
+    OS_CPU_SysTickHandler (...)
+  3).os_cpu_a.s
+    中断 
+    任务切换 
+    启动最高优先级代码 
+    中断退出          
+    中断处理           PendSVHandler 
