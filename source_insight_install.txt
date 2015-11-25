@@ -1,0 +1,11 @@
+
+
+install and change serial number
+
+可以在开始->运行 里输入regedit,打开注册表编辑器，搜索source insight，第一次搜索出来的结果是在HKEY_CURRENT_USER里，再点一下查找下一个，这次找到的就是了。
+
+在32位WIN7中的路径应该是HKEY_LOCAL_MACHINE\SOFTWARE\Source Dynamics\Source Insight\3.0\Install，
+
+在64位win7路径应该是HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Source Dynamics\Source Insight\3.0\Install，
+
+其下有个SerialNumber选项，把它的值改为当前有效的序列号就行了。(ps,3.50.0072版本的序列号是SI3US-205035-36448).
