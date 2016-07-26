@@ -1,0 +1,7 @@
+This file Greated for help me install source insight app!
+
+There is a config floder whitch can help you use it easy!
+
+http://download.csdn.net/detail/better0332/2480193
+
+copy that to source base project path ,and add it to the proj then sync the proj.
